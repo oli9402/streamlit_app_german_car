@@ -12,7 +12,7 @@ st.set_page_config(layout="wide")
 
 # Load the dataset
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# file_path = os.path.join(BASE_DIR, 'Data', 'imputed_output.csv')
+file_path = os.path.join(BASE_DIR, 'imputed_output.csv')
 df = pd.read_csv(file_path, sep= ";")
 
 st.title("Comparing German Car Marketplaces")
