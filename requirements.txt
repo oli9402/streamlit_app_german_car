@@ -3,4 +3,3 @@ streamlit-echarts
 pandas
 numpy
 pyecharts
-altair
