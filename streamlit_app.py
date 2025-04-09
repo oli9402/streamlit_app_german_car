@@ -16,16 +16,16 @@ file_path = os.path.join(BASE_DIR, 'imputed_output.csv')
 df = pd.read_csv(file_path, sep= ";")
 
 st.title("Comparing German Car Marketplaces")
-st.subheader("Over 10'000 cars were scrapped using Selenium nad BeautifulSoup. For all the following interpretation of data we asume that crawling the marketplaces was succesful with no systematic errors. Furhter we asume that the crawled output is representativ of the individual marketplace.")
-
+st.subheader("Over 10'000 cars were scrapped using Selenium and BeautifulSoup. For all the following interpretation of data we assume that crawling the marketplaces was succesful with no systematic errors. Furhter, we assume that the crawled output is representativ of the individual marketplaces.")
+st.markdown("Remark: Of course these assumptions are not valid.")
 st.markdown('''
             In this project we investigate **three research question**: 
             1. **Which online marketplaces offer the most affordable used cars?**
-            2. **How do fuel efficiency and CO₂ emissions differ between marketplaces? **
+            2. **How do fuel efficiency and CO₂ emissions differ between marketplaces?**
             3. **How accurately can missing consumption values be predicted by ML models, and which vehicle characteristics have the greatest influence?**
             
             ''')
-st.markdown("First lets get an overview of the percentage of scrapped car brand for each site. The Y-Axis is sorted based on Auto.de and only the top 10 brands are displayed. All plots share the same y-labels for comparison.")
+st.markdown("First let's get an overview of the percentage of scrapped car brand for each site. The Y-Axis is sorted based on Auto.de and only the top 10 brands are displayed. All plots share the same y-labels for comparison purpose.")
 # Create three columns
 col1, col2, col3 = st.columns(3)
 
@@ -208,9 +208,10 @@ options = {
     "xAxis": {
         "type": "category",
         "boundaryGap": False,
-        "data": x_axis,
+        "data": x_axis
     },
-    "yAxis": {"type": "value"},
+    "yAxis": {"type": "value",
+              "name": "count"},
     "series": [
         {
             "name": "Auto.de",
@@ -241,7 +242,7 @@ st.markdown('''
 We can see that Auto.de offers newer cars whereas Mobile.de offers the most cars from 2016 (of course our scrapped data is not a random sample from the different marketplaces but certain systematic differences are clearly visible. The oldest inital approval year on the Auto.de marketplace is 2016.)
             ''')
 ##–-------Price
-st.subheader("1. Which online marketplaces offer the most affordable used cars?")
+st.title("1. Which online marketplaces offer the most affordable used cars?")
 st.markdown("### Price Difference between Markplaces")
 st.markdown("For our first research question we want to visually explore the question whether there are differences in car listing prices between marketplaces. Approaching this question, we first plot boxplots of the log of prices for each marketplace.")
 
@@ -278,7 +279,7 @@ for i, source in enumerate(['Auto.de', 'Autoscout24.de', 'Mobile.de']):
 
 option = {
     "title": {
-        "text": "Boxplot of Log Price by Source",
+        "text": "Boxplot of Log Price by Marketplace",
         "left": "center"
     },
     "tooltip": {
@@ -717,4 +718,4 @@ st.markdown('''
 
             ''')
 
-st.image("importance.png", width=600)
+st.image(".importance.png", width=600)
