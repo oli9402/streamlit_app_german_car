@@ -257,7 +257,7 @@ x_labels = []
 color = ["#8da0cb","#fc8d62","#66c2a5"]
 
 for i, source in enumerate(['Auto.de', 'Autoscout24.de', 'Mobile.de']):
-    values = df_filtered[df_filtered['Marketplace'] == source]['price_log'].sort_values()
+    values = df_filtered[df_filtered['Marketplace'] == source]['log_cleaned_price'].sort_values()
     q1 = np.percentile(values, 25)
     q3 = np.percentile(values, 75)
     iqr = q3 - q1
