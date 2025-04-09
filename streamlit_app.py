@@ -587,7 +587,7 @@ option = {
     ]
 }
 st_echarts(option, height="500px")
-st.markdown("From this plot we can see that Auto.de has higher consumption values compared to Autoscout24.de and Mobile.de. Thought as we already established Auto.de offers newer cars which tend to be more fuel efficiency in general. These results are likely wrong. An explanation could be that Auto.de was had the least NA values after scraping consumption. With Mobile.de we weren't able to scrape any consumption values since these were accessible on the main car listing site. Further scraping mechanism to scrape the detailed view of each individual car was not permited and failed. Therfore we imputed the missing consumption values using machine learning models.")
+st.markdown("This plot suggests that Auto.de has higher consumption values with more variance compared to Autoscout24.de and Mobile.de. Thought as we already established Auto.de offers newer cars which tend to be more fuel efficiency in general. These results are likely wrong. The variance in comsuption values in Mobile.de and Autoscout24.de is very low. An explanation could be that Auto.de was had very little NA values after scraping consumption and therefore the imputed consumption values have less of an impact on the variance and median. With Mobile.de we weren't able to scrape any consumption values since these were not accessible on the main car listing site. Further scraping mechanism to scrape the detailed view of each individual car was not permited and failed. All the consumption values of Mobile.de very imputed using the machine learning model. The low variance of consumption values is soley attributed to imputed values by our model.")
 
 #-------Fuel type
 # Create three columns
