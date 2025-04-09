@@ -501,7 +501,7 @@ with col2:
 
 
 
-st.subheader("2. How do fuel efficiency and CO₂ emissions differ between marketplaces?")
+st.title("2. How do fuel efficiency and CO₂ emissions differ between marketplaces?")
 
 
 # Ensure no NaNs and only valid sources
@@ -699,7 +699,7 @@ with col3:
 st.markdown("We can see that most cars use Benzin and Diesel. Nearly 80 percent of cars scrapped from Mobile.de use Benzin.")
 #----------Research Question 3
 
-st.subheader("3. How accurately can missing consumption values be predicted by ML models, and which vehicle characteristics have the greatest influence?")
+st.title("3. How accurately can missing consumption values be predicted by ML models, and which vehicle characteristics have the greatest influence?")
 st.markdown("")
 st.markdown('''
 
