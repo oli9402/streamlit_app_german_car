@@ -716,4 +716,4 @@ st.markdown('''
 
             ''')
 
-st.image("./importance.png", width=600)
+st.image("importance.png", width=600)
