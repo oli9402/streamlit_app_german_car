@@ -246,11 +246,9 @@ st.title("1. Which online marketplaces offer the most affordable used cars?")
 st.markdown("### Price Difference between Markplaces")
 st.markdown("For our first research question we want to visually explore the question whether there are differences in car listing prices between marketplaces. Approaching this question, we first plot boxplots of the log of prices for each marketplace.")
 
-df["price_log"] = np.log(df["cleaned_Price"])
-
 
 # Ensure no NaNs and only valid sources
-df_filtered = df[df['price_log'].notna() & df['Marketplace'].isin(['Auto.de', 'Autoscout24.de', 'Mobile.de'])]
+df_filtered = df[df['log_cleaned_price'].notna() & df['Marketplace'].isin(['Auto.de', 'Autoscout24.de', 'Mobile.de'])]
 
 # ECharts boxplot needs 5-number summary for each group
 box_data = []
