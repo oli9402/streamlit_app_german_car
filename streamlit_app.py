@@ -9,7 +9,6 @@ from pyecharts.charts import Line
 
 st.set_page_config(layout="wide")
 
-
 # Load the dataset
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(BASE_DIR, 'imputed_output.csv')
